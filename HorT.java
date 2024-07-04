@@ -3,9 +3,16 @@ import java.util.Scanner;
 class HorT{
     public static void main(String[] args) {
         Random rnd = new Random();
+        String name ;
+        Scanner sc = new Scanner(System.in);
         int head =0;
         int tail = 0;
         int coun = 0;
+        System.out.println("Who are you?");
+        System.out.print("> ");
+        name = sc.next();
+        System.out.println("Hello, " + name + "!");
+
         System.out.println("Tossing a coin...");
         while(head<2 && tail<2){
             coun++;
@@ -23,9 +30,9 @@ class HorT{
 
         System.err.println("Heads: " + head + ", "+ "Tails: " + tail);
         if(head ==2){
-            System.out.println("You won");
+            System.out.println(name + " won!");
         }
-        else{System.out.println("You lost");}
+        else{System.out.println(name+ " lost!");}
 
     }
 }
